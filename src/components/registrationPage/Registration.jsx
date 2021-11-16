@@ -29,13 +29,16 @@ export default function Registration() {
     <div className={style.body}>
       <div className={style.container}>
         <div className={style.topnav}>
-          <Link to="">নিবন্ধন</Link>
+          <Link to="/">হোম</Link>
           <Link to="/login">প্রবেশ করুন</Link>
         </div>
         {/* body of the content */}
         <Container className="mt-3">
           <Card>
-            <Card.Header className="text-light text-center" style={{backgroundColor: "indigo"}}>
+            <Card.Header
+              className="text-light text-center"
+              style={{ backgroundColor: "indigo" }}
+            >
               <h4 class="card-title">Please fill up your Application</h4>
             </Card.Header>
             <Card.Body>
@@ -62,7 +65,10 @@ export default function Registration() {
             </Card.Body>
           </Card>
           <Card className="mt-5">
-            <Card.Header className="text-light text-center" style={{backgroundColor: "indigo"}}>
+            <Card.Header
+              className="text-light text-center"
+              style={{ backgroundColor: "indigo" }}
+            >
               <h4 class="card-title">Registration</h4>
             </Card.Header>
             <Card.Body>
@@ -258,9 +264,11 @@ export default function Registration() {
 
                 <Row className="mt-4">
                   <Col sm={6} md={6}>
-
-                  <Card>
-                      <Card.Header className="text-light" style={{backgroundColor: "indigo"}}>
+                    <Card>
+                      <Card.Header
+                        className="text-light"
+                        style={{ backgroundColor: "indigo" }}
+                      >
                         <h4 class="card-title">Permanent Address</h4>
                       </Card.Header>
                       <Card.Body>
@@ -344,8 +352,10 @@ export default function Registration() {
                   </Col>
                   <Col sm={6} md={6}>
                     <Card>
-                      <Card.Header className="text-light" style={{backgroundColor: "rgba(67,145,233,.6)"}}>
-
+                      <Card.Header
+                        className="text-light"
+                        style={{ backgroundColor: "rgba(67,145,233,.6)" }}
+                      >
                         <h4 class="card-title">Present Address</h4>
                         <p class="card-subtitle text-light">
                           <Form.Group className="mt-4">

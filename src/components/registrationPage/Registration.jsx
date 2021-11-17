@@ -12,6 +12,8 @@ import {
   Button,
 } from "react-bootstrap";
 import profileImage from "../../assets/images/default-img.jpg";
+import OnlyField from "./OnlyField/OnlyField";
+import LabelField from "./labelField/LabelField";
 
 export default function Registration() {
   const [validated, setValidated] = useState(false);
@@ -73,56 +75,9 @@ export default function Registration() {
             </Card.Header>
             <Card.Body>
               <Form noValidate validated={validated} onSubmit={handleSubmit}>
-                <Row className="">
-                  <Col sm={5} md={5} className="mt-2">
-                    <Form.Label className="fw-bold">Name:</Form.Label>
-                  </Col>
-                  <Col sm={6} md={6} className="text-center">
-                    <Form.Floating className="mb-3">
-                      <Form.Control
-                        id="floatingInputCustom"
-                        type="Name"
-                        placeholder="Person Full Name"
-                        required
-                      />
-                      <label htmlFor="floatingInputCustom">Name</label>
-                    </Form.Floating>
-                  </Col>
-                </Row>
-
-                <Row classNmae="mt-2">
-                  <Col sm={5} md={5} className="mt-2">
-                    <Form.Label className="fw-bold">Email :</Form.Label>
-                  </Col>
-                  <Col sm={6} md={6} className="text-center">
-                    <Form.Floating className="mb-3">
-                      <Form.Control
-                        id="floatingInputCustom"
-                        type="text"
-                        placeholder="Person Email"
-                        required
-                      />
-                      <label htmlFor="floatingInputCustom">Email</label>
-                    </Form.Floating>
-                  </Col>
-                </Row>
-
-                <Row className="mt-2">
-                  <Col sm={5} md={5} className=" mt-2">
-                    <Form.Label className="fw-bold">Mobile Number:</Form.Label>
-                  </Col>
-                  <Col sm={6} md={6} className="text-center">
-                    <Form.Floating className="mb-3">
-                      <Form.Control
-                        id="floatingInputCustom"
-                        type="text"
-                        placeholder="Person Mobile Number"
-                        required
-                      />
-                      <label htmlFor="floatingInputCustom">Mobile Number</label>
-                    </Form.Floating>
-                  </Col>
-                </Row>
+                <LabelField type={"text"} name={"Full Name"}/>
+                <LabelField type={"email"} name={"Email"}/>
+                <LabelField type={"text"} name={"Mobile Number"}/>
 
                 <Row className="mt-2">
                   <Col sm={3} md={3} className="mt-2">
@@ -154,77 +109,10 @@ export default function Registration() {
                   </Col>
                 </Row>
 
-                <Row className="mt-2">
-                  <Col sm={5} md={5} className="mt-2">
-                    <Form.Label className="fw-bold">Nationality:</Form.Label>
-                  </Col>
-                  <Col sm={6} md={6} className="text-center">
-                    <Form.Floating className="mb-3">
-                      <Form.Control
-                        id="floatingInputCustom"
-                        type="text"
-                        placeholder="Person Nationality"
-                        required
-                      />
-                      <label htmlFor="floatingInputCustom">Nationality</label>
-                    </Form.Floating>
-                  </Col>
-                </Row>
-
-                <Row className="mt-2">
-                  <Col sm={5} md={5} className="mt-2">
-                    <Form.Label className="fw-bold">
-                      National ID Number:
-                    </Form.Label>
-                  </Col>
-                  <Col sm={6} md={6} className="text-center">
-                    <Form.Floating className="mb-3">
-                      <Form.Control
-                        id="floatingInputCustom"
-                        type="text"
-                        placeholder="Person National ID Number"
-                        required
-                      />
-                      <label htmlFor="floatingInputCustom">
-                        National ID Number
-                      </label>
-                    </Form.Floating>
-                  </Col>
-                </Row>
-
-                <Row className="mt-2">
-                  <Col sm={5} md={5} className="mt-2">
-                    <Form.Label className="fw-bold">Date of birth:</Form.Label>
-                  </Col>
-                  <Col sm={6} md={6} className="text-center">
-                    <Form.Floating className="mb-3">
-                      <Form.Control
-                        id="floatingInputCustom"
-                        type="date"
-                        placeholder="Person Date of Birth"
-                        required
-                      />
-                      <label htmlFor="floatingInputCustom">Date of birth</label>
-                    </Form.Floating>
-                  </Col>
-                </Row>
-
-                <Row className="mt-2">
-                  <Col sm={5} md={5} className="mt-2">
-                    <Form.Label className="fw-bold">Blood group:</Form.Label>
-                  </Col>
-                  <Col sm={6} md={6} className="text-center">
-                    <Form.Floating className="mb-3">
-                      <Form.Control
-                        id="floatingInputCustom"
-                        type="text"
-                        placeholder="Person Blood group"
-                        required
-                      />
-                      <label htmlFor="floatingInputCustom">Blood group</label>
-                    </Form.Floating>
-                  </Col>
-                </Row>
+                <LabelField type={"text"} name={"Nationality"}/>
+                <LabelField type={"text"} name={"National ID Number"}/>
+                <LabelField type={"date"} name={"Date of birth"}/>
+                <LabelField type={"text"} name={"Blood Group"}/>
 
                 <Row className="mt-2">
                   <Col sm={5} md={5} className="mt-2">
@@ -274,77 +162,12 @@ export default function Registration() {
                       <Card.Body>
                         <Row>
                           <Col sm={12} md={12}>
-                            <Form.Floating className="mb-3">
-                              <Form.Control
-                                id="floatingInputCustom"
-                                type="text"
-                                placeholder="Person House No"
-                                required
-                              />
-                              <label htmlFor="floatingInputCustom">
-                                House No
-                              </label>
-                            </Form.Floating>
-
-                            <Form.Floating className="mb-3">
-                              <Form.Control
-                                id="floatingInputCustom"
-                                type="text"
-                                placeholder="Person Street/Road No"
-                                required
-                              />
-                              <label htmlFor="floatingInputCustom">
-                                Street/Road No
-                              </label>
-                            </Form.Floating>
-
-                            <Form.Floating className="mb-3">
-                              <Form.Control
-                                id="floatingInputCustom"
-                                type="text"
-                                placeholder="Person City/Town"
-                                required
-                              />
-                              <label htmlFor="floatingInputCustom">
-                                City/Town
-                              </label>
-                            </Form.Floating>
-
-                            <Form.Floating className="mb-3">
-                              <Form.Control
-                                id="floatingInputCustom"
-                                type="text"
-                                placeholder="Person Police Station"
-                                required
-                              />
-                              <label htmlFor="floatingInputCustom">
-                                Police Station
-                              </label>
-                            </Form.Floating>
-
-                            <Form.Floating className="mb-3">
-                              <Form.Control
-                                id="floatingInputCustom"
-                                type="text"
-                                placeholder="Person District"
-                                required
-                              />
-                              <label htmlFor="floatingInputCustom">
-                                District
-                              </label>
-                            </Form.Floating>
-
-                            <Form.Floating className="mb-3">
-                              <Form.Control
-                                id="floatingInputCustom"
-                                type="text"
-                                placeholder="Person Post Code"
-                                required
-                              />
-                              <label htmlFor="floatingInputCustom">
-                                Post Code
-                              </label>
-                            </Form.Floating>
+                            <OnlyField type={"text"} name={"House No"}/>
+                            <OnlyField type={"text"} name={"Street/Road No"}/>
+                            <OnlyField type={"text"} name={"City/Town"}/>
+                            <OnlyField type={"text"} name={"Police Station"}/>
+                            <OnlyField type={"text"} name={"District"}/>
+                            <OnlyField type={"text"} name={"Post Code"}/>
                           </Col>
                         </Row>
                       </Card.Body>
@@ -371,77 +194,12 @@ export default function Registration() {
                       <Card.Body>
                         <Row>
                           <Col sm={12} md={12}>
-                            <Form.Floating className="mb-3">
-                              <Form.Control
-                                id="floatingInputCustom"
-                                type="text"
-                                placeholder="Person House No"
-                                required
-                              />
-                              <label htmlFor="floatingInputCustom">
-                                House No
-                              </label>
-                            </Form.Floating>
-
-                            <Form.Floating className="mb-3">
-                              <Form.Control
-                                id="floatingInputCustom"
-                                type="text"
-                                placeholder="Person Street/Road No"
-                                required
-                              />
-                              <label htmlFor="floatingInputCustom">
-                                Street/Road No
-                              </label>
-                            </Form.Floating>
-
-                            <Form.Floating className="mb-3">
-                              <Form.Control
-                                id="floatingInputCustom"
-                                type="text"
-                                placeholder="Person City/Town"
-                                required
-                              />
-                              <label htmlFor="floatingInputCustom">
-                                City/Town
-                              </label>
-                            </Form.Floating>
-
-                            <Form.Floating className="mb-3">
-                              <Form.Control
-                                id="floatingInputCustom"
-                                type="text"
-                                placeholder="Person Police Station"
-                                required
-                              />
-                              <label htmlFor="floatingInputCustom">
-                                Police Station
-                              </label>
-                            </Form.Floating>
-
-                            <Form.Floating className="mb-3">
-                              <Form.Control
-                                id="floatingInputCustom"
-                                type="text"
-                                placeholder="Person District"
-                                required
-                              />
-                              <label htmlFor="floatingInputCustom">
-                                District
-                              </label>
-                            </Form.Floating>
-
-                            <Form.Floating className="mb-3">
-                              <Form.Control
-                                id="floatingInputCustom"
-                                type="text"
-                                placeholder="Person Post Code"
-                                required
-                              />
-                              <label htmlFor="floatingInputCustom">
-                                Post Code
-                              </label>
-                            </Form.Floating>
+                            <OnlyField type={"text"} name={"House No"}/>
+                            <OnlyField type={"text"} name={"Street/Road No"}/>
+                            <OnlyField type={"text"} name={"City/Town"}/>
+                            <OnlyField type={"text"} name={"Police Station"}/>
+                            <OnlyField type={"text"} name={"District"}/>
+                            <OnlyField type={"text"} name={"Post Code"}/>
                           </Col>
                         </Row>
                       </Card.Body>

@@ -1,17 +1,20 @@
 import React from 'react'
-
-export default function OnlyField() {
-
+import {
+        Form
+    } from "react-bootstrap";
+    
+export default function OnlyField(props) {
+    const {type, name} = props;
     return (
         <div>
             <Form.Floating className="mb-3">
                 <Form.Control
                 id="floatingInputCustom"
-                type="text"
-                placeholder="Person House No"
+                type={type}
+                placeholder={`Person ${name}`}
                 required
                 />
-                <label htmlFor="floatingInputCustom">House No</label>
+                <label htmlFor="floatingInputCustom">{name}</label>
             </Form.Floating>
         </div>
     )

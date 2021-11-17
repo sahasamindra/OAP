@@ -15,7 +15,6 @@ export default function Landing() {
     <div className={style.body}>
       <div className={style.container}>
         <div className={style.topnav}>
-          <Link to="/">হোম</Link>
           <Link to="/registration">নিবন্ধন</Link>
           <Link to="/login">প্রবেশ করুন</Link>
           {/* <a href="#"> নিবন্ধন</a>

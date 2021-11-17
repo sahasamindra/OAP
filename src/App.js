@@ -4,6 +4,7 @@ import Landing from "./components/landingPage/Landing";
 import { Routes, Route } from "react-router-dom";
 import Login from "./components/login/Login";
 import Registration from "./components/registrationPage/Registration";
+import CIC from "./components/cic/CIC";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
         <Route path="/" element={<Landing />} />
         <Route path="/login" element={<Login />} />
         <Route path="/registration" element={<Registration />} />
+        <Route path="/cic" element={<CIC />} />
       </Routes>
     </div>
   );
